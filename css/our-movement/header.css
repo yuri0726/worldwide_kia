@@ -1,0 +1,158 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3011;
+}
+
+.logo a {
+    cursor: pointer;
+}
+
+.header__container {
+    /* position: relative; */
+    width: 100%;
+    height: 110px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo {
+    width: 118px;
+    height: 32px;
+    margin-top: 45px;
+}
+
+header .logo__svg, .global-region__svg {
+    height: 100%;
+    fill: rgb(255,255,255);
+}
+.gnb a {
+    display: block;
+}
+.gnb {
+    display: flex;
+    vertical-align: middle;
+}
+
+.gnb__toggle {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+.gnb__toggle .line {
+    display: block;
+    position: relative;
+    width: 28px;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    /* transition: background-color 0.4s, transform 0.4s, -webkit-transform 0.4s; */
+}
+
+header .gnb .gnb__toggle {
+    display: none;
+}
+
+.l2 , .l3 {
+    margin-top: 7px;
+}
+
+
+.global-region__svg {
+    position: absolute;
+    top: 36px;
+    right: 45px;
+    width: 32px;
+    height: 32px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 80px;
+    flex-wrap: nowrap;
+}
+
+.menu li:nth-child(2),.menu li:nth-child(3)  {
+    margin-left: 50px;
+}
+
+.menu__item {
+    text-align: center;
+}
+
+.gnb .menu__link {
+    position: relative;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 45px 0;
+}
+.header .global-region {
+    display: block;
+}
+
+.cate1,.cate2,.cate3 {
+    transition: border-color 0.4s;
+}
+
+ /* ! 각 페이지에 맞게 언더라인 태그 주석 풀어주세요 ! */ 
+
+
+ /* Our Symbol */
+
+ /* .cate1 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+ } */
+ 
+
+ /* Our Movement */
+
+ .cate2 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+ }
+
+
+  /* Our Inspiration */
+
+ /* .cate3 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+ } */
+
+
+
+ @media only screen and (max-width: 959px) {
+
+    /* 햄버거 네비게이션 등장함 */
+    header .gnb .gnb__toggle {
+        display: block;
+    }
+
+    /* Menu 사라짐 */
+    .gnb__pad {
+        display: none;
+    }
+
+    /* 랭귀지 아이콘 사이즈와 위치가 변경됨 */
+    .global-region__svg {
+        top: 39px;
+        right: 70px;
+        width: 26px;
+        height: 26px;
+        transform: translate(-50%, -50%);
+    }
+    /* logo 이미지의 사이즈와 마진값 변경됨 */
+    header .logo {
+        width: 89px;
+        height: 24px;
+        margin-top: 32px;
+    }
+    /* 헤더를 감싸는 컨테이너의 양 옆 여백값이 줄어듬 */
+    .header__container {
+        padding: 0 30px;
+    }
+
+ }

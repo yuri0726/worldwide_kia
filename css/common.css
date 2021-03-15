@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/* Web Font */
+@font-face { 
+   font-family: 'KiaSignature'; 
+   src: url(../font/KiaSignatureLight.woff2) format('woff2'), url(../font/KiaSignatureLight.woff) format("woff");
+   font-weight: 100;
+}
+
+@font-face { 
+   font-family: 'KiaSignature'; 
+   src: url(../font/KiaSignatureRegular.woff2) format('woff2'), url(../font/KiaSignatureRegular.woff) format("woff");
+   font-weight: 400;
+}
+
+@font-face { 
+   font-family: 'KiaSignature'; 
+   src: url(../font/KiaSignatureBold.woff2) format('woff2'), url(../font/KiaSignatureBold.woff) format("woff");
+   font-weight: 700;
+}
+
+@font-face { 
+   font-family: 'icon'; 
+   src: url(../font/icon.woff2) format('woff2');
+   font-weight: 400;
+}
+
+html {
+   background-color: #fff;
+   -ms-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased; 
+}
+
+body {
+   font-family: 'KiaSignature',sans-serif;
+}
+
+a {
+   color: #0a0a0a;
+   text-decoration: none;
+   background-color: transparent;
+   -webkit-text-decoration-skip: objects;
+}
+
+div, ul, li {
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+}
+
+ul { list-style: none; }
+
+img {
+   max-width: 100%;
+   height: auto;
+   border: 0;
+   vertical-align: top;
+   -ms-interpolation-mode: bicubic;
+}
+
+/* Text Style */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+h1 {  
+   color:rgb(255,255,255);  
+   font-weight: 700;
+}
+h2 {   }
+h3 {
+   font-family: 'KiaSignature', sans-serif;
+   font-size: 28px;
+   line-height: 44.8px;
+   font-weight: 700;
+   -webkit-font-smoothing: antialiased;  
+   word-break: keep-all;
+   word-wrap: break-word;
+}
+h4 {   }
+h5 {   }
+h6 { }
+
+p {
+   word-break: keep-all;
+   word-wrap: break-word;
+   font-family: 'KiaSignature',sans-serif; 
+   font-size: 20px;
+   line-height: 32px;
+   font-weight: 100;
+   letter-spacing: normal;
+   -webkit-font-smoothing: antialiased;
+   word-break: keep-all;
+   word-wrap: break-word;
+}
+
+@media screen and (max-width:959px) {
+
+   h3 {
+      font-size: 22px;
+      line-height: 35.2px;
+   }
+
+   p {
+      font-size: 16px;
+      line-height: 25.6px;
+   }
+
+}

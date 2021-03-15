@@ -1,0 +1,382 @@
+/* Animation */
+@keyframes fade_in {
+   0% { opacity: 0; }
+   100% { opacity: 1; }
+}
+
+/* Hero 2 CSS */
+.hero_2_wrap {
+   width: 100%;
+   height: auto;
+   overflow: hidden;
+}
+
+/* Hero 2-1 Brand Story */
+.brand_story {
+   width: 100%;
+   height: auto;
+   background-image: url(../img/hero_2_story.jpg);
+   background-size: cover;
+   background-attachment: fixed;
+   /* 요소가 스크롤될 때 배경 이미지의 스크롤 여부 설정 */
+}
+
+.brand_story_title {
+   position: relative;
+   width: 100%;
+   height: 900px;
+   padding: 240px 0;
+   color: rgb(255, 255, 255);
+}
+
+.brand_story_title span {
+   position: absolute;
+   width: 100%;
+   height: 78px;
+   bottom: 200px;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   z-index: 1;
+
+   font-family: 'KiaSignature', sans-serif;
+   font-size: 60px;
+   line-height: 78px;
+   font-weight: 700; 
+   -webkit-font-smoothing: antialiased;
+   word-break: keep-all;
+   word-wrap: break-word;  
+   text-align: center;
+}
+
+.brand_story_text_wrap {
+   position: relative;
+   width: 100%;
+   height: 736px;
+   padding: 240px 0;
+   color: rgb(255, 255, 255);
+   text-align: center;
+}
+
+.brand_story_text_wrap::before {
+   content:' '; 
+   position:absolute; 
+   left:0; 
+   top:-100%; 
+   width:100%; 
+   height:100%; 
+   background: linear-gradient( 0deg
+   , rgba(57, 50, 43, 0.8) 0%, rgba(57, 50, 43, 0.8) 1%, rgba(57, 50, 43, 0) 50%, rgba(57, 50, 43, 0) 100%);
+   /* background: -webkit-linear-gradient(bottom
+   , rgba(57, 50, 43, 0.8) 0%, rgba(57, 50, 43, 0.8) 1%, rgba(57, 50, 43, 0) 50%, rgba(57, 50, 43, 0) 100%); */
+}
+
+.brand_story_text_wrap::after { 
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: rgba(57, 50, 43, 0.8);
+}
+
+.brand_story_text {
+   width: 1898px;
+   height: 256px;
+   padding: 0 30px;
+   position: absolute;
+   z-index: 1;
+   bottom: 110px;
+   left: 50%;
+   -webkit-transform: translate(-50%, -50%);
+}
+
+.brand_story_2 p {
+   font-weight: 700;
+}
+
+/* Hero 2-2 Brand DNA */
+.brand_dna_wrap {
+   width: 100%;
+   height: 1000px;
+   padding: 120px 0;
+   background-color: rgb(236, 229, 221);
+}
+.brand_dna {
+   width: 100%;
+   display: flex;
+   max-width: 100%;
+   margin: 0 auto;
+}
+
+.brand_dna_img {
+   width: 50%;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   -webkit-box-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   align-items: center;
+}
+
+
+.brand_dna_text_wrap {
+   width: 600px;
+   height: auto;
+   padding: 0 0 0 80px;
+}
+.brand_dna_text {
+   width: 540px;
+   height: 512px;
+   padding: 0 30px;
+}
+
+.brand_dna_text div p {
+   letter-spacing: 0.4px;
+}
+
+.brand_dna_text div:last-child p {
+   font-weight: 700;
+}
+
+/* Hero 2-3 Brand Belive */
+.brand_belive {
+   width: 100%;
+   height: auto;
+   padding: 240px 0;
+   background-image:url(../img/hero_2_belive.jpg);
+   background-size:cover;
+   background-attachment: fixed;
+   /* 요소가 스크롤될 때 배경 이미지의 스크롤 여부 설정 */
+}
+.brand_belive_title {
+   width: 100%;
+   height: 200px;
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 0 40px;
+   padding: 0 30px;
+   color: rgb(255, 255, 255);
+   text-align: center;
+   position: relative;
+   z-index: 100;
+}
+.brand_belive_title h3 {
+   position: sticky;
+   top: 0px;
+}
+
+.brand_belive_text_wrap {
+   width: 100%;
+   height: 435px;
+   padding: 40px 30px 0;
+   color: rgb(255, 255, 255);
+   text-align: center;
+}
+
+/* Hero 2-4 Brand Understand */
+.brand_understand {
+   position: relative;
+   width: 100%;
+   height: 1078px;
+   background-color: rgb(246, 242, 237);
+}
+.brand_understand_img {
+   width: 100%;
+   position: absolute;
+   text-align: center;
+   top: -50px;
+   left: 50%;
+   transform: translate(-50%, 0);
+   -webkit-transform: translate(-50%, 0);
+   -ms-transform: translate(-50%, 0);
+   z-index: 1;
+   padding: 0 30px;
+}
+
+.brand_understand_text_wrap {
+   width: 100%;
+   height: 256px;
+   padding: 610px 30px 0;
+   text-align: center;
+}
+
+.brand_understand_text_wrap div:first-child p { 
+   font-weight: 700;
+}
+
+/* Tablet Ver. */
+@media screen and (max-width:960px) {
+
+   /* Hero 2-1 Brand Story */
+   .brand_story_title {
+      padding: 120px 0;
+   }
+   .brand_story_title span {
+      width: 350px;
+      height: 104px;
+      font-size: 40px;
+      line-height: 52px;
+   }
+
+   .brand_story_text_wrap {
+      height: 440px;
+      padding: 120px 0;
+      text-align: left;
+   }
+   
+   .brand_story_text {
+      width: 1838px;
+      height: 256px;
+      bottom: 60px;
+      left: 0;
+      -webkit-transform: translate(0, 0);
+   }
+
+   /* Hero 2-2 Brand DNA */
+   .brand_dna_wrap {
+      height: 1100px;
+   }
+   .brand_dna {
+      max-width: 500px;
+      display: block;
+      margin: 0;
+   }
+
+   .brand_dna_img {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      -webkit-box-pack: flex-start;
+      justify-content: flex-start;
+      -webkit-box-align: flex-start;
+      align-items: flex-start;
+   }
+
+   .brand_dna_img img {
+      width: 100%;
+      max-width: 400px;
+   }
+ 
+   .brand_dna_text_wrap {
+      width: 100%;
+      height: auto;
+      padding: 40px 0 0;
+      text-align: left;
+
+   }
+   .brand_dna_text {
+      width: 100%;
+      height: auto;
+   }
+
+   /* Hero 2-3 Brand Belive */
+   .brand_belive {
+      padding: 120px 0 300px;
+   }
+
+   .brand_belive_title {
+      height: 300px;
+      justify-content: flex-start;
+      margin: 0 0 50px;
+      text-align: left;
+   }
+   .brand_belive_title h3 span {
+      display: block;
+   }
+
+   .brand_belive_text_wrap {
+      height: 250px;
+      text-align: left;
+   }
+
+   .br_2 { display:  none; }
+
+   /* Hero 2-4 Brand Understand */
+   .brand_understand {
+      height: 725px;
+   }
+   .brand_understand_img {
+      top: -130px;
+   }
+
+   .brand_understand_text_wrap {
+      padding: 420px 30px 0;
+      text-align: left;
+   }
+
+}
+
+/* Mobile Ver. */
+@media screen and (max-width:470px) {
+   /* Hero 2-1 Brand Story */
+   .brand_story {
+      background-size: cover;
+      background-attachment: fixed;
+      background-image: url(../img/hero_2_story_m.jpg);
+   }
+
+   .brand_story_title {
+      height: 812px;
+   }
+
+   .brand_story_text_wrap {
+      height: 590px;
+      padding: 120px 0;
+   }
+   
+   .brand_story_text {
+      width: 375px;
+      height: 350px;
+      bottom: 25%;
+   }
+
+   /* Hero 2-2 Brand DNA */
+
+   .brand_dna_img img {
+      padding-right: 10%;
+   }
+
+   .brand_dna_text_wrap {
+      padding: 40px 30px 0 ;
+   }
+   .brand_dna_text {
+      padding: 0;
+   }
+
+   /* Hero 2-3 Brand Belive */
+   .brand_belive {
+      padding: 120px 0 150px;
+   }
+
+   .brand_belive_title {
+      height: 350px;
+      margin: 0 0 50px;
+      text-align: left;
+   }
+
+   .brand_belive_text_wrap {
+      height: 450px;
+      padding: 0 30px 0;
+      text-align: left;
+   }
+
+   /* Hero 2-4 Brand Understand */
+   .brand_understand {
+      height: 600px;
+      padding: 120px 0 0 0;
+   }
+   .brand_understand_img {
+      top: -90px;
+   }
+
+   .brand_understand_text_wrap {
+      padding: 100px 30px 0;
+   }
+
+}
