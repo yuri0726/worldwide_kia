@@ -187,11 +187,11 @@
                            
                   </div>
                   <div class="prologe_text">
-                     <div class="text_div"> 
+                     <div class="text_div text_div_1"> 
                         <strong class="txt_strong">우리는 움직임 속에서 영감을 얻습니다.</strong>
                      </div>
                      <br>
-                     <div class="text_div"> 
+                     <div class="text_div text_div_2"> 
                         <p class="txt_p">
                            <span class="txt_span">기아는 지속가능한 (sustainable) 모빌리티 솔루션을 제공하는 비전을 가지고,
                            </span>
@@ -206,7 +206,7 @@
                         </p>
                      </div>
                      <br>
-                     <div class="text_div"> 
+                     <div class="text_div text_div_3"> 
                         <p class="txt_p"> 
                            <span class="txt_span">영감과 열정은 우리의 근원입니다.</span></p>
                         <p class="txt_p"> 
@@ -503,18 +503,26 @@
             console.log('currentScrollValue is ' + currentScrollValue);
       });
 
+      ScrollReveal().reveal('.text_div_1 strong', { delay : 300, duration: 1500});
+      ScrollReveal().reveal('.text_div_2 p span', { delay : 600, duration: 1500});
+      ScrollReveal().reveal('.text_div_3 p span', { delay : 900, duration: 1500});
+
+      // Hero 2-1
       ScrollReveal().reveal('.brand_story_1 p', { delay : 300, duration: 1500});
       ScrollReveal().reveal('.brand_story_2 p', { delay : 600, duration: 1500});
 
+      // Hero 2-2
       ScrollReveal().reveal('.brand_dna_text_1 p', { delay : 300, duration: 1500});
       ScrollReveal().reveal('.brand_dna_text_2 p', { delay : 600, duration: 1500});
       ScrollReveal().reveal('.brand_dna_text_3 p', { delay : 900, duration: 1500});
       ScrollReveal().reveal('.brand_dna_text_4 p', { delay : 1200, duration: 1500});
-
+      
+      // Hero 2-3
       ScrollReveal().reveal('.brand_belive_text_1 p', { delay : 300, duration: 1500});
       ScrollReveal().reveal('.brand_belive_text_2 p', { delay : 600, duration: 1500});
       ScrollReveal().reveal('.brand_belive_text_3 p', { delay : 900, duration: 1500});
 
+      // Hero 2-4
       ScrollReveal().reveal('.brand_understand_text_1 p', { delay : 300, duration: 1500});
       ScrollReveal().reveal('.brand_understand_text_2 p', { delay : 600, duration: 1500});
       ScrollReveal().reveal('.brand_understand_text_3 p', { delay : 900, duration: 1500});
