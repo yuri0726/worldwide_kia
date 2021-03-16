@@ -1,4 +1,10 @@
 main { overflow: hidden; }
+
+@keyframes move {
+   0% { top: -50px; }
+   100% { top: -20px; }
+}
+
 /* 박성아 GNB Bar */
 /* GNB Bar */
 
