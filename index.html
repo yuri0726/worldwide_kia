@@ -320,7 +320,7 @@
          </div>
 
          <!-- Hero 2-4 Brand Understand -->
-         <div class="brand_understand">
+         <div class="brand_understand" id="hero_2_4">
             <div class="brand_understand_img">
                <img src="img/hero_2_understand.jpg" alt="">
             </div>
@@ -472,6 +472,7 @@
       var nav = document.getElementById('lnb'),
       gnb_nav = document.getElementById('gnb_nav'),
       docElem = document.documentElement,
+      aniEle01Y = document.getElementById('hero_2_4').offsetTop,
       scrollPos,
       docHeight;
 
@@ -493,6 +494,10 @@
             nav.className = "lnb";
             gnb_nav.className = "display_none";
         };
+
+        if( scrollPos > aniEle01Y - 700) {
+                  document.getElementsByClassName('brand_understand_img')[0].style = "animation: move 2s ease 5 forwards;"
+         };
 
       });
 
