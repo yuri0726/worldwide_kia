@@ -15,6 +15,9 @@
     <meta property="og:url" content="https://worldwide.kia.com/kr/our-inspiration">
 
     <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- **github에서 퍼온 스크롤 + reveal 이벤트 -->
+   <script src="https://unpkg.com/scrollreveal"></script>
  
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
@@ -153,19 +156,31 @@
             </div>    
             <!-- 3rd vh -->
             <div class="pin-spacer_3rd">
-                <div class="sect__area">
-                    <div class="sect__cont">
-                        <h2 class="sect__h">Movement in Ocean</h2>
-                        <p class="sect__p">파도의 패턴과 물결 무늬의 움직임은<br>우리를 몰입하게 만듭니다.</p>
-                    </div>
-                </div>
-                <div class="sect__front">
-                    <div class="sect__visual">
-                        <div class="video-rwd">
+                <div class="sect__back">
+                    <div class="sect__back_visual">
+                        <div class="back_video-rwd">
                             <video poster="img/ooh-ocean-d.jpg" src="video/ooh-ocean-d.mp4" autoplay playsinline loop muted></video>
+                        </div>
+                        <div class="back_video-rwd-tm">
+                            <video poster="img/ooh-ocean-d.jpg" src="video/ooh-ocean-m.mp4" autoplay playsinline loop muted></video>
                         </div>
                     </div>
                 </div>
+                <!-- <div class="sect__on"> -->
+                    <div class="sect__area">
+                        <div class="sect__cont">
+                            <h2 class="sect__h">Movement in Ocean</h2>
+                            <p class="sect__p">파도의 패턴과 물결 무늬의 움직임은<br>우리를 몰입하게 만듭니다.</p>
+                        </div>
+                    </div>
+                    <div class="sect__front">
+                        <div class="sect__visual">
+                            <div class="video-rwd">
+                                <video poster="img/ooh-ocean-d.jpg" src="video/ooh-ocean-d.mp4" autoplay playsinline loop muted></video>
+                            </div>
+                        </div>
+                    </div>
+                <!-- </div>     -->
             </div>
         </main> 
 
@@ -223,6 +238,11 @@
                 </ul>
             </div>
         </footer>
-    </div>   
+    </div>
+    
+    <script>
+        ScrollReveal().reveal('.veil__sub span', { delay : 300, duration: 1500});
+        ScrollReveal().reveal('.veil__sub_2 span', { delay : 300, duration: 1500});
+    </script>
 </body>
 </html>
