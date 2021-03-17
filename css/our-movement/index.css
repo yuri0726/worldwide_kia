@@ -1,10 +1,5 @@
 main { overflow: hidden; }
 
-@keyframes move {
-   0% { top: -50px; }
-   100% { top: -20px; }
-}
-
 /* 박성아 GNB Bar */
 /* GNB Bar */
 
@@ -334,6 +329,16 @@ h1 {
 
 
 /* 박유리 CSS */
+
+@keyframes move {
+   0% { top: -50px; }
+   100% { top: -20px; }
+}
+@keyframes move_up_down {
+   0% { margin-top: -10px; }
+   100% { margin-top: 10px; }
+}
+
 .hero_2_wrap {
    width: 100%;
    height: auto;
