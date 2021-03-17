@@ -1,0 +1,507 @@
+main { overflow: hidden; }
+/* 박성아 GNB Bar */
+/* GNB Bar */
+
+.gnb_nav {
+   position: fixed;
+   width: 100%;
+   z-index: 100;
+   top: 0;
+   left: 0;
+}
+ .gnb_nav .nav {
+   z-index: 10;
+}
+ 
+ /* 배경 블러 효과 */
+ .gnb_nav.is-sticky.has-bg::before {
+   background-color: rgba(0, 0, 0, 0.2);
+   -webkit-backdrop-filter: saturate(180%) blur(20px);
+   backdrop-filter: saturate(180%) blur(20px);
+ }
+ .gnb_nav::after {
+   content: '';
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: calc(100% - 1px);
+   top: 0;
+   left: 0;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+ }
+ .gnb_nav::before {
+   content: '';
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+ }
+ 
+ .gnb__nav {
+   display: flex;
+   justify-content: center;
+   padding: 23px 0;
+   position: relative;
+ }
+ .gnb__nav li:nth-child(2), .gnb__nav li:nth-child(3) {
+   margin-left: 25px;
+ }
+ 
+ .nav__link {
+   padding: 0 23px;
+   display: block;
+   
+ }
+ .nav__name {
+   color: rgb(255, 255, 255);
+   font-size: 15px;
+   font-weight: bold;
+   letter-spacing: 2.25px;
+   line-height: 24px;
+   opacity: 0.5;
+   position: relative;
+ }
+ .name1 {
+   opacity: 1;
+ }
+ .nav__item a:hover span {
+   opacity: 1;
+   transition: all .5s;
+ }
+ 
+ .gnb__nav .is-active a span::before {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: -25px;
+   width: 100%;
+   height: 2px;
+   opacity: 1;
+   background-color: #fff;
+ }
+ .gnb__nav li a span::before {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: -25px;
+   width: 100%;
+   height: 2px;
+   opacity: 0;
+   background-color: #fff;
+}
+
+
+/* 황지원 css */
+body {
+   background-color: #000000;
+   min-width: 280px;
+   margin: 0;
+   display: block;
+}
+.root {position: relative;}
+
+.scroll {overflow: hidden !important;}
+
+.main {min-height: 100vh;}
+
+.hero_cover {
+   height: 100vh;
+   position: relative;
+   overflow: hidden;
+}
+.hero_visual {
+   position: relative;
+   left: 0;
+   right: 0;
+    bottom: 0;
+    width: 100%;
+               /* transform: translat']e(0px, 0px); */
+   }
+   .video_d {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   .vidsual_video {
+      max-width: 100%;
+    border: 0;
+    vertical-align: top;
+   }
+   .video_m {display: none;}
+
+/* hero1 button & span  */
+.hero_button{
+   position: absolute;
+   overflow: visible;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   z-index: 2;
+}
+   .btn_play {
+      width: 70px;
+      height: 70px;
+      background-color: rgba(5, 20, 31, 0.4); 
+      border-radius: 50%;
+   } 
+   .hero_button span {
+      font-size: 16px;
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      color: rgb(255,255,255); 
+      white-space: nowrap;
+      text-transform: uppercase;
+      bottom: -25px;
+   }
+ .hero_text {
+   opacity: 1;
+   visibility: inherit;
+   position: absolute;
+   bottom: 8%;
+   /* left: 50%; */
+   width: 100%;
+   padding-left: 1.5rem;
+   padding-right: 1.5rem;
+   color: #fff;
+   text-align: center;
+   z-index: 2;
+ }
+   .eyebrow {
+      margin-bottom: 20px;
+      font-size: 16px;
+      display: block;
+      color: rgb(246, 242, 237);
+      font-weight: 700;
+      letter-spacing: 2.4px;
+      line-height: 22.4px;
+   }
+   .hero_text h2 {
+      font-size: 42px;
+      line-height:58.8px;
+      margin: 0;
+      padding: 0;
+      font-weight: 700;
+   }
+   .hero_text p {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      color:rgb(255,255,255);
+      opacity: 0.6;
+      font-weight: 100;
+      line-height: 32px;
+   }
+   .br_m {display: none;}
+
+   .btn-guide-arrow {
+      display: block;
+      transform: translate3d(-50%, 0, 0);
+      animation: arrow-down infinite 1.5s;
+      cursor: pointer;
+      position: absolute;
+      bottom: 3%;
+      z-index: 1;
+      left: 50%;
+      width: 40px;
+      height: 40px;
+       background-image: url(../../img/button_down_wht.png);
+     }
+         /* Arrow-down 애니메이션 적용 */
+      @keyframes arrow-down {
+       0% {
+         -webkit-transform: translate3d(-50%, 0, 0);
+                 transform: translate3d(-50%, 0, 0); }
+       30% {
+         -webkit-transform: translate3d(-50%, 20%, 0);
+                 transform: translate3d(-50%, 20%, 0); }
+       60% {
+         -webkit-transform: translate3d(-50%, 0, 0);
+                 transform: translate3d(-50%, 0, 0); } 
+               }
+
+ .hero_visual::after { 
+     content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+     background-color: rgba(0,0,0,0.5);   
+      }    
+
+/* hero 2 page  */
+.sect-space {
+   display: block;
+   position: relative;
+}
+.hero_2_kn {
+   /* transform: translate(0px, 0px); */
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    max-width: 1920px;
+    width: 1920px;
+    max-height: 1080px;
+    height: 1080px;
+    padding: 0px;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.hero_2_visual{
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+}
+.hero_2_cont {   
+   opacity: 1;
+    visibility: inherit;
+    position: relative;
+    width: 100%;
+    padding: 0 15px;
+    color: #fff;
+    text-align: center;
+}
+   /* kn kn_logo 합치기 ? */
+   .kn{
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 140px;
+    }
+   .kn_logo {
+      max-width: 1060px;
+      margin: 0 auto;
+      margin-left: 525px;
+      margin-right: 525px;
+   }
+   .kn_title {
+      font-size: 42px;
+      line-height: 58.8px;
+      font-weight: 700;
+   }
+.hero_2_visual::after { 
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);   
+    }
+
+
+/* HERO 3 VIDEO */
+
+
+.main3_3 { width:100%;
+   height:100vh;
+   min-height: 100%;
+   position:relative;
+}
+
+.main3_3 video { max-width:100vw;
+   width: 100%;
+   height:100vh;
+   vertical-align: top;
+   object-fit: cover;
+}
+
+.main3_3_video {
+   position:relative;
+   max-width:1060px;
+   width:100%;
+   bottom:0;
+   left: 0;
+   object-position: center;
+   margin: -90vh auto 0 ;
+   overflow-x: hidden;
+}
+
+.main3_3_video video {
+   width: 100%;
+   height: 100%;
+   max-width: 1060px;
+}
+
+
+.main3_3_play {
+   display: block;
+   position: absolute;
+   top: calc(50% - 76px) ;
+   left: calc(50% - 33px);
+} 
+.main3_3_play p { /*더 보기*/
+   text-align: center;
+   font-size: 15px;
+   color:white;
+   padding-top: 10px;
+}
+
+.main3_3_play_btn {
+   width: 66px;
+   height: 66px;
+   vertical-align: center;
+}
+
+
+.main3_3_video_text {
+   width:100%;
+   display:flex;
+   justify-content: space-between;
+   margin-top:50px;
+}
+
+.main3_3_video_text p { 
+   color:#414141;
+   -webkit-font-smoothing: antialiased; }
+
+.main3_3_video_text :nth-child(1) {
+   font-size:28px;
+   font-weight: 700;
+   line-height:44.8px;
+   -webkit-font-smoothing: antialiased;
+}
+.main3_3_video_text :nth-child(2) {
+   font-size:18px;
+   font-weight: 100;
+   line-height:28.8px;
+   -webkit-font-smoothing: antialiased;
+}
+
+    
+   @media only screen and (max-width: 959px) {
+      .hero_visual {
+         height: 1024px;
+         height: auto;
+      }
+      .video_d { display: block; }
+      .video_d video{
+         width: auto;
+         height:1024px;
+         object-fit: cover;
+      }
+      .video_m {display: none;}
+      .hero_button{ top: 40%; }  
+         .btn_play {
+            width: 50px;
+            height: 50px;
+         } 
+         .hero_button span {
+          display: none;
+         }
+         .eyebrow {
+            margin: 0;
+            font-size: 14px;
+            letter-spacing: 2.1px;
+            line-height: 19.6px;
+         }
+         .hero_text h2 {
+            font-size: 32px;
+            line-height: 44.8px;
+         }
+         .hero_text p {
+            font-size: 16px;
+            line-height: 25.6px;
+            margin: 16px 0;
+           }
+           .btn-guide-arrow {
+               width: 20px;
+               height: 20px;
+            }
+
+      /* hero 2 page  */
+      .hero_2_kn {
+         left: 0px;
+         top: 0px;
+         max-width: 768px;
+         width: 768px;
+         max-height: 1024px;
+         height: 1024px;
+         padding: 0px;
+     }
+      .hero_2_visual {
+         width: 100%;
+         height: 1024px;
+      }
+      .hero_2_cont { padding: 0 30px; }
+        /* kn kn_logo 합치기 ? */
+        .kn{ 
+          margin-bottom: 180px;
+         }
+        .kn_logo {
+           margin-left:0;
+           margin-right: 0;
+        }
+        .kn_title {
+             font-size: 32px;   
+            line-height: 44.8px;
+        }
+
+        /* HERO 3 VIDEO 959px */
+
+        .main3_3 { 
+         min-height: 633px;
+         max-height: 100vh;
+         }
+ 
+         .main3_3_play {
+               top: calc(50% - 108px);
+               left: calc(50% - 33px);
+         }
+
+         
+         .main3_3_play_wrap p {display: none;}
+      
+         .main3_3_video_text {
+               flex-direction: column;
+               align-items: left;
+               margin-top:0;
+         }
+         .main3_3_video_text :nth-child(1) {
+               font-size:24px;
+               font-weight: 400;
+               line-height:38.4px;
+               padding: 0 30px;
+               margin-top: 40px;
+         }
+         .main3_3_video_text :nth-child(2) {
+               font-size:14px;
+               line-height:22.4px;
+               padding: 0 30px;
+               margin : 14px 0;
+         }
+   }
+
+@media only screen and (max-width: 414px)  {
+   /* hero 1 page  */
+   .hero_visual { height:auto;}
+   .video_m { display: block;}
+   .video_m video{
+      width: auto;
+      height:812px;
+      object-fit: cover;
+      }
+   .video_d {  display: none;}
+   .br_m { display:block; }
+   .hero_2_kn {
+      max-width: 375px;
+      width: 375px;
+      max-height: 812px;
+      height: 812px;
+  }
+  .hero_2_visual {   height:812px; }
+  .hero_2_cont { padding: 0 15px;}
+  .kn{ 
+      margin-top: 60px;
+      margin-bottom: 140px;
+   }
+}
