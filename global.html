@@ -47,10 +47,10 @@
           <div class="gnb__pad">
               <ul class="menu">
                   <li class="menu__item">
-                      <a href="" class="menu__link cate1">Our Symbol</a>
+                      <a href="index.html" class="menu__link cate1">Our Symbol</a>
                   </li>
                   <li class="menu__item">
-                      <a href="index.html" class="menu__link cate2">Our Movement</a>
+                      <a href="our_movement.html" class="menu__link cate2">Our Movement</a>
                   </li>
                   <li class="menu__item">
                       <a href="our_inspiration.html" class="menu__link cate3">Our Inspiration</a>
@@ -377,6 +377,13 @@
         window.addEventListener('scroll', function(){
         scrollPos = docElem.scrollTop;
         // console.log(scrollPos);
+
+        if ( screen.width >= 1220 && scrollPos > 110 ) {
+            document.getElementsByClassName('region_list_wrap')[0].style = "top:144px;"
+        }
+        else {
+            document.getElementsByClassName('region_list_wrap')[0].style = "top:289px;"
+        }
 
         if( screen.width < 1220 && scrollPos > 78) {
             menu.className = "fixed";
