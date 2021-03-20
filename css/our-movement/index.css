@@ -96,12 +96,14 @@ main { overflow: hidden; }
 
 /* 황지원 CSS */
 /* ourMovement css  */
+body {
+   background-color: black;
+}
 .main {
-   box-sizing: border-box;
    height: auto;
    display: block;
    word-break: keep-all;
--webkit-font-smoothing: antialiased;
+   -webkit-font-smoothing: antialiased;
 }
 
 /* header 에 넣어야 하는 부분 ??????????? */
