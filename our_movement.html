@@ -4,9 +4,13 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta nes="" name="keywords" content="기아, 기아자동차, Kia, 브랜드스토리, 움직임, movement, 영감, inspiration, Kia motors, 기아월드와이드, Kia worldwide">
-   <meta nes="" name="description" content="새로운 기아의 브랜드 스토리와 브랜드 철학을 확인하세요. 우리는 일상의 움직임 속에서 영감을 얻고 지속가능한 모빌리티 혁신을 이어갑니다.">
-   <meta nes="" name="application-name" content="worldwide.kia.com">
+   <meta name="title" content="영감을 주는 움직임 | 기아 글로벌 브랜드 사이트 | Movement that inspires">
+   <meta name="keywords" content="기아, 기아자동차, Kia, Kia motors, 기아월드와이드,
+   Kia worldwide, OOH, 자연, land, ocean, air">
+   <meta http-equiv="subject" content="기업 홈페이지, 자동차 브랜드, 브랜드 홈페이지 ">
+   <meta property="og:description" content="우리는 영감이 시작되는 공간과 시간을 만듭니다. 자연의 움직임에서 새로운 영감을 얻으세요.">
+   <meta property="og:image" content="https://worldwide.kia.com/kr/image/og/KIA_OOH_air.jpg">
+   <meta property="og:url" content="https://worldwide.kia.com/kr/our-inspiration">
 
    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 
@@ -96,7 +100,7 @@
       </div>
   </header>
 
-   <main>
+   <main class="main">
       <!-- 황지원 -->
       <section class="ourMovement main" id="main_1">
          <!-- GNB Bar 박성아 -->
@@ -125,9 +129,9 @@
                <li class="nav_item">
                   <span class="border_1"></span>
                   <a href="#main_1"class="nav_link">          
-                     <span class="nav_name_1">BRAND MANIFESTO</span>
+                   <span class="nav_name_1">BRAND MANIFESTO</span>
                   </a>   
-                  <div class="btn-guide-arrow">
+                  <div class="btn-guide-arrow" onclick="document.location='#manifesto_2'">
                      <span class="a11y"></span>
                </div>
                   <span class="border_1"></span>
@@ -151,7 +155,7 @@
          <!--kia - div -->
          <div class="brandManifesto">
             <!-- manifesto 1 page  -->
-            <section class="manifesto_1">
+            <section class="manifesto_1" id="main_1">
                <div class="main_visual">
                   <div class="main_video_d">
                      <video class="visual_video"   
@@ -171,56 +175,58 @@
                <h1>Movement that inspires</h1>
             </section>
             
-               <!-- manifesto_2 page -->
-            <div class="manifesto_2">
-               <div class="prologe">
-                  <div class="prologe_visual">
-                     <div class="main_video_d">
-                        <video class="visual_video" src="video/prologue-d.mp4" autoplay playsinline loop muted>
-                        </video>
+            <!-- manifesto_2 page -->
+            <section id="manifesto_2">
+               <div class="manifesto_2" >
+                  <div class="prologe">
+                     <div class="prologe_visual">
+                        <div class="main_video_d">
+                           <video class="visual_video" src="video/prologue-d.mp4" autoplay playsinline loop muted>
+                           </video>
+                        </div>
+                        <div class="main_video_t">
+                           <video class="prologe_video_t"
+                           src="../kia/video/prologue-m.mp4">
+                           </video>
+                        </div>
+                              
                      </div>
-                     <div class="main_video_t">
-                        <video class="prologe_video_t"
-                        src="../kia/video/prologue-m.mp4">
-                        </video>
-                     </div>
-                           
-                  </div>
-                  <div class="prologe_text">
-                     <div class="text_div text_div_1"> 
-                        <strong class="txt_strong">우리는 움직임 속에서 영감을 얻습니다.</strong>
-                     </div>
-                     <br>
-                     <div class="text_div text_div_2"> 
-                        <p class="txt_p">
-                           <span class="txt_span">기아는 지속가능한 (sustainable) 모빌리티 솔루션을 제공하는 비전을 가지고,
-                           </span>
-                        </p>
-                        <p class="txt_p">
-                           <span class="txt_span">일상의 움직임 속에서 의미를 발견하고 이동하는 모든 순간 영감을 느낄 수 있도록,
-                           </span>
-                        </p>
-                        <p class="txt_p">
-                           <span class="txt_span">혁신적인 제품을 만들고 편리한 서비스를 제공하기 위하여 존재합니다.
-                           </span>
-                        </p>
-                     </div>
-                     <br>
-                     <div class="text_div text_div_3"> 
-                        <p class="txt_p"> 
-                           <span class="txt_span">영감과 열정은 우리의 근원입니다.</span></p>
-                        <p class="txt_p"> 
-                           <span class="txt_span">전 세계 기아 구성원들은 성장과 진보의 마음가짐으로
-                           </span> 
-                        </p>
-                        <p class="txt_p"> 
-                           <span class="txt_span">우리의 브랜드 존재 이유를 실천하기 위해 매일 앞으로 나아가고 있습니다.
-                           </span>
-                        </p>
+                     <div class="prologe_text">
+                        <div class="text_div"> 
+                           <strong class="txt_strong">우리는 움직임 속에서 영감을 얻습니다.</strong>
+                        </div>
+                        <br>
+                        <div class="text_div"> 
+                           <p class="txt_p">
+                              <span class="txt_span">기아는 지속가능한 (sustainable) 모빌리티 솔루션을 제공하는 비전을 가지고,
+                              </span>
+                           </p>
+                           <p class="txt_p">
+                              <span class="txt_span">일상의 움직임 속에서 의미를 발견하고 이동하는 모든 순간 영감을 느낄 수 있도록,
+                              </span>
+                           </p>
+                           <p class="txt_p">
+                              <span class="txt_span">혁신적인 제품을 만들고 편리한 서비스를 제공하기 위하여 존재합니다.
+                              </span>
+                           </p>
+                        </div>
+                        <br>
+                        <div class="text_div"> 
+                           <p class="txt_p"> 
+                              <span class="txt_span">영감과 열정은 우리의 근원입니다.</span></p>
+                           <p class="txt_p"> 
+                              <span class="txt_span">전 세계 기아 구성원들은 성장과 진보의 마음가짐으로
+                              </span> 
+                           </p>
+                           <p class="txt_p"> 
+                              <span class="txt_span">우리의 브랜드 존재 이유를 실천하기 위해 매일 앞으로 나아가고 있습니다.
+                              </span>
+                           </p>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
+            </section>
             
          </div>
       </section>
