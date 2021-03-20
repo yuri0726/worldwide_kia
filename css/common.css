@@ -31,6 +31,8 @@ html {
    -webkit-text-size-adjust: 100%;
    -moz-osx-font-smoothing: grayscale;
    -webkit-font-smoothing: antialiased; 
+   scroll-behavior: smooth; 
+    /* scrollevent 추가된부분 */
 }
 
 body {
@@ -42,7 +44,9 @@ a {
    text-decoration: none;
    background-color: transparent;
    -webkit-text-decoration-skip: objects;
+   cursor: pointer;
 }
+
 
 div, ul, li {
    background-repeat: no-repeat;
