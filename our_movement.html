@@ -26,7 +26,7 @@
 
    <title>브랜드 스토리 | 기아 글로벌 브랜드 | Movement that inspires</title>
 </head>
-<body>
+<body onscroll="scrollEvent()">
    
    <header>
       <div class="header__container">
@@ -352,7 +352,7 @@
 
       <!-- 유수정 -->
       <div id="main_3">
-         <div class="main3_0_wrap">
+         <div class="main3_0_wrap" id='main3_0_wrap'>
             <div class="main3_0">
                 <span class="a">Movement that inspires</span></div>
                 <div class="main3_0_text_wrap">
@@ -366,24 +366,25 @@
                         <br>
                         <strong>창의, 혁신, 진보를 추구하며 <span class="reveal-text"><i>안주하지 않는 마인드셋&nbsp;</i></span></strong>
                     </div>
-                </div>
+               </div>
             
-        </div>
-        <!-- MAIN 1 -->
-        <div class="main3_1_wrap">
-            <div class="main3_1_img">
-                <img src="img/127398769zlqa.jpg">
-                <!--  alt style = "transform:translate3d(0px, -30px, 0px);" -->
+        
+            <!-- MAIN 1 -->
+            <div class="main3_1_wrap">
+                  <div class="main3_1_img">
+                     <img src="img/127398769zlqa.jpg">
+                     <!--  alt style = "transform:translate3d(0px, -30px, 0px);" -->
+                  </div>
+                  <div class="main3_1_text_wrap">
+                     <div class="main3_1_text">
+                        <p>우리는 이러한 마인드셋이 당신과 닿아 있다고 믿습니다.<br><br></p>
+                        <p>진보적이고 낙관적이며 긍정적인 마인드셋을 가진 당신</p>
+                        <p>미래를 위해 변화를 두려워하지 않는 당신</p>
+                        <p>언제 어디서든 새로운 아이디어와 기회를 발견하는 당신</p>
+                     </div>
+                  </div>
             </div>
-            <div class="main3_1_text_wrap">
-                <div class="main3_1_text">
-                    <p>우리는 이러한 마인드셋이 당신과 닿아 있다고 믿습니다.<br><br></p>
-                    <p>진보적이고 낙관적이며 긍정적인 마인드셋을 가진 당신</p>
-                    <p>미래를 위해 변화를 두려워하지 않는 당신</p>
-                    <p>언제 어디서든 새로운 아이디어와 기회를 발견하는 당신</p>
-                </div>
-            </div>
-        </div>
+         </div>
         <!-- MAIN 2 -->
         <div class="main3_2_wrap">
             <div class="main3_2">
@@ -579,6 +580,44 @@
       ScrollReveal().reveal('.main3_2_box p:nth-child(1)', { delay : 100, duration: 1500 });
       ScrollReveal().reveal('.main3_2_box p:nth-child(2)', { delay : 300, duration: 1500 });
       ScrollReveal().reveal('.main3_2_box p:nth-child(3)', { delay : 500, duration: 1500 });
+
+      var scrollY = window.pageYOffset;
+      var pageHeight = document.documentElement.clientHeight;
+      var aniEle1Y = document.getElementById('main3_0_wrap').offsetTop;
+
+        function scrollEvent() {
+
+            scrollY = window.pageYOffset;
+
+            if ( scrollY > aniEle1Y - pageHeight + 1000) {
+                var disY = scrollY - aniEle1Y + pageHeight;
+                if ( disY >= 0 && disY < 100) {
+               document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.1) forwards; ";
+                }
+                else if ( disY >= 100 && disY < 200) {
+               document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.2) forwards; ";
+                }
+                else if ( disY >= 200 && disY < 300) {
+               document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.3) forwards; ";
+                }
+                else if ( disY >= 300 && disY < 400) {
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.4) forwards; ";
+                }
+                else if ( disY >= 400 && disY < 500) {
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.5) forwards; ";
+                }
+                else if ( disY >= 500 && disY < 600) {
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.6) forwards; ";
+                }
+                else if ( disY >= 600 && disY < 700) {
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.7) forwards; ";
+                }
+                else if ( disY >= 700 && disY < 800) {
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.8) forwards; ";
+                }
+                else { document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 1) forwards; "}
+            }
+         }
 
    </script>
 
