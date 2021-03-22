@@ -117,7 +117,7 @@
                   </a>
                </li>
                <li class="nav__item">
-                  <a href="#main_3" class="nav__link">
+                  <a href="#main3" class="nav__link">
                      <span class="nav__name name3">BRAND MINDSET</span>
                   </a>
                </li>
@@ -145,7 +145,7 @@
                </li>
                <li class="nav_item">
                   <span  class="border_3"></span >
-                  <a href="#main_3" class="nav_link">     
+                  <a href="#main3" class="nav_link">     
                      <span class="nav_name_3">BRAND MINDSET</span>
                   </a>
                   <span  class="border_3"></span >
@@ -351,7 +351,7 @@
       </div>
 
       <!-- 유수정 -->
-      <div id="main_3">
+      <div id="main3">
          <div class="main3_0_wrap" id='main3_0_wrap'>
             <div class="main3_0">
                 <span class="a">Movement that inspires</span></div>
@@ -372,7 +372,7 @@
             <!-- MAIN 1 -->
             <div class="main3_1_wrap">
                   <div class="main3_1_img">
-                     <img src="img/127398769zlqa.jpg">
+                     <img src="img/127398769zlqa.jpg" class="main3_1_img_img">
                      <!--  alt style = "transform:translate3d(0px, -30px, 0px);" -->
                   </div>
                   <div class="main3_1_text_wrap">
@@ -476,6 +476,7 @@
   </footer>
 
    <script>
+
       var nav = document.getElementById('lnb'),
       gnb_nav = document.getElementById('gnb_nav'),
       aniEle01Y = document.getElementById('hero_2_2').offsetTop,
@@ -509,22 +510,21 @@
          };
 
          // 스크롤에 따른 GNB_bar opacity 변화
-         var main2 = document.getElementById('main_2'),
-             main3 = document.getElementById('main_3');
+         var main2 = document.getElementById('main_2');
 
          if ( scrollPos < main2.offsetTop ) {
-            document.getElementsByClassName('name1')[0].style = "opacity:1;"   
+            document.getElementsByClassName('name1')[0].style = "opacity:1;"
          } else {
             document.getElementsByClassName('name1')[0].style = "opacity:0.5;"  
          };
 
-         if ( scrollPos >= main2.offsetTop && scrollPos < main3.offsetTop ) {
+         if ( scrollPos >= main2.offsetTop && scrollPos < document.getElementById('main3').offsetTop ) {
             document.getElementsByClassName('name2')[0].style = "opacity:1;" 
          }
          else {
             document.getElementsByClassName('name2')[0].style = "opacity:0.5;" 
          };
-         if(scrollPos >= main3.offsetTop ) {
+         if(scrollPos >= document.getElementById('main3').offsetTop ) {
             document.getElementsByClassName('name3')[0].style = "opacity:1;"
             document.getElementsByClassName('name2')[0].style = "opacity:0.5;" 
             document.getElementsByClassName('name1')[0].style = "opacity:0.5;"  
@@ -535,11 +535,6 @@
       });
 
 
-      // github에서 퍼온 스크롤 위치 콘솔창에 표시하는 스크립트
-      document.addEventListener('scroll', function() {
-            var currentScrollValue = document.documentElement.scrollTop;
-            console.log('currentScrollValue is ' + currentScrollValue);
-      });
 
       ScrollReveal().reveal('.text_div_1 strong', { delay : 300, duration: 1500});
       ScrollReveal().reveal('.text_div_2 p span', { delay : 600, duration: 1500});
@@ -583,41 +578,85 @@
 
       var scrollY = window.pageYOffset;
       var pageHeight = document.documentElement.clientHeight;
-      var aniEle1Y = document.getElementById('main3_0_wrap').offsetTop;
+      var aniEle1Y = document.getElementById('main3').offsetTop;
 
         function scrollEvent() {
 
-            scrollY = window.pageYOffset;
+         scrollY = window.pageYOffset;
+         if ( document.body.clientWidth > 959 ){
+            if ( scrollY > aniEle1Y - pageHeight + 100 ) {
+                var disY = scrollY - aniEle1Y + pageHeight - 1800;
 
-            if ( scrollY > aniEle1Y - pageHeight + 1000) {
-                var disY = scrollY - aniEle1Y + pageHeight;
                 if ( disY >= 0 && disY < 100) {
-               document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.1) forwards; ";
+               document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.15); ";
                 }
                 else if ( disY >= 100 && disY < 200) {
-               document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.2) forwards; ";
+               document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.2); ";
                 }
                 else if ( disY >= 200 && disY < 300) {
-               document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.3) forwards; ";
+               document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.3); ";
                 }
                 else if ( disY >= 300 && disY < 400) {
-                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.4) forwards; ";
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.4); ";
                 }
                 else if ( disY >= 400 && disY < 500) {
-                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.5) forwards; ";
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.5); ";
                 }
                 else if ( disY >= 500 && disY < 600) {
-                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.6) forwards; ";
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.6); ";
                 }
                 else if ( disY >= 600 && disY < 700) {
-                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.7) forwards; ";
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.7); ";
                 }
                 else if ( disY >= 700 && disY < 800) {
-                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.8) forwards; ";
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.8); ";
                 }
-                else { document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 1) forwards; "}
+                else if ( disY >= 800 && disY < 900) {
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.9); ";
+                }
+                else if ( disY >= 900) {
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 1); ";
+                }
             }
          }
+         else {
+            if ( scrollY > aniEle1Y - pageHeight + 100 ) {
+                var disY = scrollY - aniEle1Y + pageHeight - 2000;
+
+                if ( disY >= 0 && disY < 100) {
+               document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.15); ";
+                }
+                else if ( disY >= 100 && disY < 200) {
+               document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.2); ";
+                }
+                else if ( disY >= 200 && disY < 300) {
+               document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.3); ";
+                }
+                else if ( disY >= 300 && disY < 400) {
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.4); ";
+                }
+                else if ( disY >= 400 && disY < 500) {
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.5); ";
+                }
+                else if ( disY >= 500 && disY < 600) {
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.6); ";
+                }
+                else if ( disY >= 600 && disY < 700) {
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.7); ";
+                }
+                else if ( disY >= 700 && disY < 800) {
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.8); ";
+                }
+                else if ( disY >= 800 && disY < 900) {
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 0.9); ";
+                }
+                else if ( disY >= 900) {
+                document.getElementsByClassName('main3_1_wrap')[0].style = "background-color: rgba(237, 230, 222, 1); ";
+                }
+                
+            }
+         };
+      }
 
    </script>
 
