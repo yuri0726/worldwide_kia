@@ -108,26 +108,26 @@
                      <span>YOUR REGION</span>
                   </h1>
                   <ul class="region_list_ul">
-                     <li><a href="#item_1">Asia - Pacific</a></li>
-                     <li><a href="#item_2">Western Europe</a></li>
-                     <li><a href="#item_3">Eastern Europe</a></li>
-                     <li><a href="#item_4">Middle East</a></li>
-                     <li><a href="#item_5">Africa</a></li>
-                     <li><a href="#item_6">North America</a></li>
-                     <li><a href="#item_7">Central - South America</a></li>
+                     <li class="region_list_ul_li"><a href="#item_1" onclick="clickEvent(0)">Asia - Pacific</a></li>
+                     <li class="region_list_ul_li"><a href="#item_2" onclick="clickEvent(1)">Western Europe</a></li>
+                     <li class="region_list_ul_li"><a href="#item_3" onclick="clickEvent(2)">Eastern Europe</a></li>
+                     <li class="region_list_ul_li"><a href="#item_4" onclick="clickEvent(3)">Middle East</a></li>
+                     <li class="region_list_ul_li"><a href="#item_5" onclick="clickEvent(4)">Africa</a></li>
+                     <li class="region_list_ul_li"><a href="#item_6" onclick="clickEvent(5)">North America</a></li>
+                     <li class="region_list_ul_li"><a href="#item_7" onclick="clickEvent(6)">Central - South America</a></li>
                   </ul>
                </div>
 
                <div class="region_list_m" id="list">
                   <h1></h1>
                   <ul class="region_list_ul_m">
-                     <li><a href="#item_1">Asia - Pacific</a></li>
-                     <li><a href="#item_2">Western Europe</a></li>
-                     <li><a href="#item_3">Eastern Europe</a></li>
-                     <li><a href="#item_4">Middle East</a></li>
-                     <li><a href="#item_5">Africa</a></li>
-                     <li><a href="#item_6">North America</a></li>
-                     <li><a href="#item_7">Central - South America</a></li>
+                     <li><a href="#item_1" class="region_list_ul_a" onclick="clickEvent2(0)">Asia - Pacific</a></li>
+                     <li><a href="#item_2" class="region_list_ul_a" onclick="clickEvent2(1)">Western Europe</a></li>
+                     <li><a href="#item_3" class="region_list_ul_a" onclick="clickEvent2(2)">Eastern Europe</a></li>
+                     <li><a href="#item_4" class="region_list_ul_a" onclick="clickEvent2(3)">Middle East</a></li>
+                     <li><a href="#item_5" class="region_list_ul_a" onclick="clickEvent2(4)">Africa</a></li>
+                     <li><a href="#item_6" class="region_list_ul_a" onclick="clickEvent2(5)">North America</a></li>
+                     <li><a href="#item_7" class="region_list_ul_a" onclick="clickEvent2(6)">Central - South America</a></li>
                   </ul>
                </div>
             </div>
@@ -379,20 +379,74 @@
         // console.log(scrollPos);
 
         if ( screen.width >= 1220 && scrollPos > 110 ) {
-            document.getElementsByClassName('region_list_wrap')[0].style = "top:144px;"
+            document.getElementsByClassName('region_list_wrap')[0].style = "top:144px;";
         }
         else {
-            document.getElementsByClassName('region_list_wrap')[0].style = "top:289px;"
+            document.getElementsByClassName('region_list_wrap')[0].style = "top:289px;";
         }
 
         if( screen.width < 1220 && scrollPos > 78) {
-            menu.className = "fixed";
+            menu.className = "fixed";            
         }
         else {
             menu.className = "region_list_m"
         };
 
         });
+
+      function clickEvent(target) {
+
+         for (i=0; i<7; i++) {
+            document.getElementsByClassName('region_list_ul_li')[i].style = "border-bottom: 1px solid rgba(5, 20, 31, 0.2);";
+         }
+
+         if ( target == 0 ) {
+            document.getElementsByClassName('region_list_ul_li')[0].style = "border-bottom: 1px solid rgba(5, 20, 31, 1);";
+         } else if ( target == 1 ) {
+            document.getElementsByClassName('region_list_ul_li')[1].style = "border-bottom: 1px solid rgba(5, 20, 31, 1);";
+         } else if ( target == 2 ) {
+            document.getElementsByClassName('region_list_ul_li')[2].style = "border-bottom: 1px solid rgba(5, 20, 31, 1);";
+         } 
+         else if ( target == 3 ) {
+            document.getElementsByClassName('region_list_ul_li')[3].style = "border-bottom: 1px solid rgba(5, 20, 31, 1);";
+         } 
+         else if ( target == 4 ) {
+            document.getElementsByClassName('region_list_ul_li')[4].style = "border-bottom: 1px solid rgba(5, 20, 31, 1);";
+         } 
+         else if ( target == 5 ) {
+            document.getElementsByClassName('region_list_ul_li')[5].style = "border-bottom: 1px solid rgba(5, 20, 31, 1);";
+         } else if ( target == 6 ) {
+            document.getElementsByClassName('region_list_ul_li')[6].style = "border-bottom: 1px solid rgba(5, 20, 31, 1);";
+         }
+
+      }
+
+      function clickEvent2(target) {
+
+      for (i=0; i<7; i++) {
+         document.getElementsByClassName('region_list_ul_a')[i].style = "border-bottom: 1px solid rgba(0, 0, 0, 0);";
+      }
+
+      if ( target == 0 ) {
+         document.getElementsByClassName('region_list_ul_a')[0].style = "border-bottom: 1px solid rgba(0, 0, 0, 0.5);";
+      } else if ( target == 1 ) {
+         document.getElementsByClassName('region_list_ul_a')[1].style = "border-bottom: 1px solid rgba(0, 0, 0, 0.5);";
+      } else if ( target == 2 ) {
+         document.getElementsByClassName('region_list_ul_a')[2].style = "border-bottom: 1px solid rgba(0, 0, 0, 0.5);";
+      } 
+      else if ( target == 3 ) {
+         document.getElementsByClassName('region_list_ul_a')[3].style = "border-bottom: 1px solid rgba(0, 0, 0, 0.5);";
+      } 
+      else if ( target == 4 ) {
+         document.getElementsByClassName('region_list_ul_a')[4].style = "border-bottom: 1px solid rgba(0, 0, 0, 0.5);";
+      } 
+      else if ( target == 5 ) {
+         document.getElementsByClassName('region_list_ul_a')[5].style = "border-bottom: 1px solid rgba(0, 0, 0, 0.5);";
+      } else if ( target == 6 ) {
+         document.getElementsByClassName('region_list_ul_a')[6].style = "border-bottom: 1px solid rgba(0, 0, 0, 0.5);";
+      }
+
+      }
 
   </script>
    
