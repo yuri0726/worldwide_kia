@@ -72,7 +72,7 @@ main { overflow: hidden; }
    transition: all .5s;
  }
  
- .gnb__nav .is-active a span::before {
+ /* .gnb__nav .is-active a span::before {
    content: '';
    position: absolute;
    left: 0;
@@ -81,7 +81,7 @@ main { overflow: hidden; }
    height: 2px;
    opacity: 1;
    background-color: #fff;
- }
+ } */
  .gnb__nav li a span::before {
    content: '';
    position: absolute;
